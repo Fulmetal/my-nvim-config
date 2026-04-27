@@ -18,13 +18,13 @@ vim.opt.autoindent = true
 
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "100"
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.virtualedit = "block"
 
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
-
 
 vim.opt.scrolloff = 8
 
