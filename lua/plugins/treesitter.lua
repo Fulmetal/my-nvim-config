@@ -19,6 +19,7 @@ return {
             "vim",
             "vue",
             "yaml",
+            "json",
     }
 
     ts.setup({})

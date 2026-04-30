@@ -11,3 +11,13 @@ vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>', { desc = 'Focus nvim-tre
 
 --neogit
 vim.keymap.set('n', '<leader>gg', ':<cmd>Neogit<cr>', { desc = 'Open neogit' })
+
+--copilot lua
+vim.keymap.set("i", "<C-l>", function()
+        local copilot = require("copilot.suggestion")
+        if copilot.is_visible() then
+            copilot.accept()
+            return ""
+        end
+        return "<C-l>"
+end, { expr = true, silent = true, desc = "Accept copilot suggestion" })
