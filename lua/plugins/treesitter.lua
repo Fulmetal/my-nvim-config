@@ -20,6 +20,8 @@ return {
             "vue",
             "yaml",
             "json",
+            "c_sharp",
+            "razor"
     }
 
     ts.setup({})

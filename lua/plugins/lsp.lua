@@ -4,11 +4,24 @@ return {
         opts = {
             ensure_installed = { "lua_ls", "rust_analyzer", "copilot" },
         },
-        dependencies =
+        dependencies = {
             {
-                { "mason-org/mason.nvim", opts = {} },
-                "neovim/nvim-lspconfig",
+                "mason-org/mason.nvim", opts = {
+                    registries = {
+                        "github:mason-org/mason-registry",
+                        "github:crashdummyy/mason-registry",
+                    },
+                }
             },
+            "neovim/nvim-lspconfig",
+        },
+    },
+    {
+        "seblyng/roslyn.nvim",
+        ---@module 'roslyn.config',
+        ---@type RoslynNvimConfig
+        ft = { "cs", "razor" },
+        opts = {},
     },
     {
         "folke/lazydev.nvim",
@@ -144,7 +157,7 @@ return {
                 enabled = true,
                 auto_trigger = true,
                 keymap = {
-                        accept = false,
+                    accept = false,
                     -- accept = "<C-l>",   -- like VS Code
                     -- next = "<M-]>",
                     -- prev = "<M-[>",
