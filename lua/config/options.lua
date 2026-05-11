@@ -33,3 +33,5 @@ vim.diagnostic.config({
     virtual_text = false,
     virtual_lines = true
 })
+
+vim.api.nvim_clear_autocmds({ group = 'nvim.terminal', event = 'TermClose' })

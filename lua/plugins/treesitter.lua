@@ -21,7 +21,8 @@ return {
             "yaml",
             "json",
             "c_sharp",
-            "razor"
+            "razor",
+            "regex",
     }
 
     ts.setup({})
