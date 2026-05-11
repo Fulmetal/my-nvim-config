@@ -7,7 +7,8 @@ return {
             require'alpha.term'
             dashboard.section.terminal = {
                 type = "terminal",
-                command = "ascii-image-converter ~/Pictures/fulmetal\\ avatar.jpg -C -c | cat",
+                command = "ascii-image-converter " .. vim.fn.stdpath("config") .. "/fulmetal_avatar.jpg -C -c",
+                -- command = "ascii-image-converter ~/Pictures/fulmetal_avatar.jpg -C -c | cat",
                 width = 70,
                 height = 35,
                 opts = {

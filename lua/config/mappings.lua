@@ -12,11 +12,11 @@ vim.keymap.set('n', '<leader>fc', function()
 end, { desc = 'Find files in Neovim config' })
 
 --neo tree
-vim.keymap.set('n', '<leader>ee', ':NvimTreeToggle<CR>', { desc = 'Toggle nvim-tree file explorer' })
-vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>', { desc = 'Focus nvim-tree file explorer' })
+vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle nvim-tree file explorer' })
+vim.keymap.set('n', '<leader>ef', '<cmd>NvimTreeFocus<CR>', { desc = 'Focus nvim-tree file explorer' })
 
 --neogit
-vim.keymap.set('n', '<leader>gg', ':<cmd>Neogit<cr>', { desc = 'Open neogit' })
+vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>', { desc = 'Open neogit' })
 
 --copilot lua
 vim.keymap.set("i", "<C-l>", function()
@@ -49,7 +49,7 @@ vim.keymap.set(
 )
 
 --toggleterm
-vim.keymap.set('n', '<leader>tt', ':ToggleTerm<CR>', { desc = 'Toggle terminal' })
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 -- vim.keymap.set('t', '<C-h>', '<C-w>h', { desc = "Move to left window" })
